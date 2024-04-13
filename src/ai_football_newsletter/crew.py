@@ -1,6 +1,8 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
+from datetime import datetime
+
 # Uncomment the following line to use an example of a custom tool
 # from ai_football_newsletter.tools.custom_tool import MyCustomTool
 
@@ -40,20 +42,32 @@ class FootballNewsletterCrew():
 		return Agent(
 			verbose=True,
 		)
+	
+	# Tasks for the above agents
 
 	@task
-	def research_task(self) -> Task:
+	def fetch_news_task(self, agent) -> Task:
 		return Task(
-			config=self.tasks_config['research_task'],
-			agent=self.researcher()
+			# including description here instead of yaml as we want to use the datetime module
+            description=f'Fetch top AI news stories from the past 24 hours. The current time is {datetime.now()}.',
+            agent=agent,
+            async_execution=True, # allows us to fetch 5-10 different articles at the same time
 		)
 
 	@task
-	def reporting_task(self) -> Task:
+	def analyze_news_task(self, agent, context) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
-			agent=self.reporting_analyst(),
-			output_file='report.md'
+            agent=agent,
+            async_execution=True,
+			context=context, # feeds the previous task's output to this task
+		)
+	
+	@task
+	def compile_newsletter_task(self, agent, context, callback_function) -> Task:
+		return Task(
+            agent=agent,
+            context=context,
+			callback=callback_function,
 		)
 
 	@crew
