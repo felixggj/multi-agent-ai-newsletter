@@ -12,6 +12,11 @@ OpenAIGPT3 = ChatOpenAI(
     model="gpt-3.5-turbo",
 )
 
+# Initialize the OpenAI GPT-4 language model
+OpenAIGPT4 = ChatOpenAI(
+    model="gpt-4-0125-preview",
+)
+
 @CrewBase
 class FootballNewsletterCrew():
 	"""FootballNewsletter crew"""
@@ -88,5 +93,6 @@ class FootballNewsletterCrew():
 			tasks=self.tasks, # Automatically created by the @task decorator
 			process=Process.hierarchical,
 			manager_llm=OpenAIGPT3,
+			# manager_llm=OpenAIGPT4,
 			verbose=2
 		)
