@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "ai_football_newsletter"
+version = "0.1.0"
+description = "ai-football-newsletter using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = {extras = ["tools"], version = "^0.28.8"}
+
+[tool.poetry.scripts]
+ai_football_newsletter = "ai_football_newsletter.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
