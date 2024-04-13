@@ -1,15 +1,55 @@
-research_task:
+fetch_news_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2024.
+    Fetch the top football news stories from the past 24 hours, focusing on league matches, player transfers, and tactical discussions. The current time is {datetime.now()}.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    "A list of the top football news story titles, URLs, and a brief summary for each story from the past 24 hours.
+    Example Output:
+    [
+        {
+            'title': 'Dramatic Late Winner in Manchester Derby',
+            'url': 'https://example.com/story1',
+            'summary': 'A last-minute goal from Marcus Rashford seals a victory for Manchester United against their city rivals...'
+        },
+        {
+            'title': 'Liverpool Confirms New Signing from LaLiga',
+            'url': 'https://example.com/story2',
+            'summary': 'Liverpool has officially announced the signing of a high-profile LaLiga player as they prepare for next season...'
+        },
+        ...
+    ]"
 
-reporting_task:
+analyze_news_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Analyze each football news story to extract the most significant insights, quotes, and statistics.
+    Ensure there are at least 5 well-researched articles covering the latest matches, player updates, and tactical analyses.
+    Each article should provide a clear narrative, essential statistics, impactful quotes from players or coaches, and a strategic perspective.
   expected_output: >
-    A fully fledge reports with the mains topics, each with a full section of information.
-    Formated as markdown with out '```'
+    A markdown-formatted analysis for each news story, systematically organized to include a comprehensive rundown, detailed bullet points, 
+    and a "Why it Matters" section. There should be at least 5 articles, each meticulously following the proper format.
+    Example Output: 
+    '## Manchester United Clashes with Liverpool: A Tactical Overview\n\n
+    **The Rundown:** Manchester United's latest encounter with Liverpool ended in a dramatic 2-1 victory...\n\n
+    **The Details:**\n\n
+    - Key tactical adjustments made by United's coach at halftime proved pivotal...\n\n
+    - Liverpool's forward missed a critical penalty kick in the 75th minute...\n\n
+    **Why It Matters:** This match's outcome could significantly influence the Premier League standings and highlights the strategic depth in modern football.\n\n'
+
+compile_newsletter_task:
+  description: >
+    Compile the football newsletter using the analyzed articles from fetch and analyze tasks. Ensure the newsletter is engaging, with a consistent style and layout that highlights key football stories, player performances, and tactical insights.
+  expected_output: >
+    A complete football newsletter in markdown format, maintaining a consistent and appealing layout. Each section should begin with a headline, followed by the news rundown, details, and an analysis of why the news matters in the football context.
+    Example Output: 
+    '# Top Football Stories This Week:\\n\\n
+    - Manchester United's Last-Minute Victory Shakes Premier League\\n
+    - New Tactical Shifts in Barcelona's Recent Match\\n\\n
+
+    ## Manchester United's Last-Minute Victory Shakes Premier League\\n\\n
+    **The Rundown:** A dramatic conclusion to the derby as Rashford scores in the 90th minute...\\n\\n
+    **The Details:** Rashford was set up by a brilliant pass from Bruno Fernandes...\\n\\n
+    **Why It Matters:** This victory places United in a strong position for the title race, showcasing strategic depth under the new coach...\\n\\n
+
+    ## New Tactical Shifts in Barcelona's Recent Match\\n\\n
+    **The Rundown:** Barcelona's coach introduced a new formation that could redefine their season...\\n\\n
+    **The Details:** The 3-5-2 formation allowed more midfield control and defensive security...\\n\\n
+    **Why It Matters:** This tactical adjustment could be a turning point for Barcelona as they face tougher opponents in upcoming matches...\\n\\n'
