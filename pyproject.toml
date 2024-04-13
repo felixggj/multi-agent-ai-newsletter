@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "ai_football_newsletter"
 version = "0.1.0"
-description = "AI Football Newsletter using crewAI"
+description = "Football Newsletter using crewAI"
 authors = ["Felix Gomez-Guillamon <me@felix-gomez.com>"]
 
 [tool.poetry.dependencies]

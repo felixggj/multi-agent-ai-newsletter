@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from ai_football_newsletter.crew import AiFootballNewsletterCrew
+from ai_football_newsletter.crew import FootballNewsletterCrew
 
 
 def run():
@@ -7,4 +7,4 @@ def run():
     inputs = {
         'topic': 'AI LLMs'
     }
-    AiFootballNewsletterCrew().crew().kickoff(inputs=inputs)
+    FootballNewsletterCrew().crew().kickoff(inputs=inputs)
