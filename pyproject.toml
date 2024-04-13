@@ -1,16 +1,20 @@
 [tool.poetry]
 name = "ai_football_newsletter"
 version = "0.1.0"
-description = "ai-football-newsletter using crewAI"
-authors = ["Your Name <you@example.com>"]
+description = "AI Football Newsletter using crewAI"
+authors = ["Felix Gomez-Guillamon <me@felix-gomez.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<=3.13"
 crewai = {extras = ["tools"], version = "^0.28.8"}
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.3"
+python-dotenv = "1.0.0"
+duckduckgo_search = "^4.4.2"
 
 [tool.poetry.scripts]
 ai_football_newsletter = "ai_football_newsletter.main:run"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
