@@ -3,11 +3,9 @@ from crewai.project import CrewBase, agent, crew, task
 
 from langchain_openai import ChatOpenAI
 
-# Uncomment the following line to use an example of a custom tool
-# from ai_football_newsletter.tools.custom_tool import MyCustomTool
+from ai_football_newsletter.tools.search_tools import SearchTools 
 
-# Check our tools documentations for more information on how to use them
-# from crewai_tools import SerperDevTool
+from file_io import save_markdown
 
 # Initialize the OpenAI GPT-3.5 language model
 OpenAIGPT3 = ChatOpenAI(
@@ -33,6 +31,7 @@ class FootballNewsletterCrew():
 	def news_fetcher_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config['news_fetcher_agent'],
+			tools=[SearchTools.search_internet],
 			verbose=True,
 			allow_delegation=True,
 		)
@@ -41,6 +40,7 @@ class FootballNewsletterCrew():
 	def news_analyzer_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config['news_analyzer_agent'],
+			tools=[SearchTools.search_internet],
 			verbose=True,
 			allow_delegation=True,
 		)
@@ -63,7 +63,7 @@ class FootballNewsletterCrew():
 		)
 
 	@task
-	def analyze_news_task(self, agent, context) -> Task:
+	def analyze_news_task(self, context) -> Task:
 		return Task(
 			config=self.tasks_config['analyze_news_task'],
             agent=self.news_analyzer_agent,
@@ -72,12 +72,12 @@ class FootballNewsletterCrew():
 		)
 	
 	@task
-	def compile_newsletter_task(self, agent, context, callback_function) -> Task:
+	def compile_newsletter_task(self, context) -> Task:
 		return Task(
 			config=self.tasks_config['compile_newsletter_task'],
             agent=self.newsletter_compiler_agent,
             context=context,
-			callback=callback_function,
+			callback_function=save_markdown, # saves the newsletter to a markdown file
 		)
 
 	@crew
