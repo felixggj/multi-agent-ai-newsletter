@@ -1,4 +1,7 @@
 fetch_news_task:
+  description: >
+    Fetch top AI news stories from the past 24 hours. The current time is {current_time}.',
+
   expected_output: >
     "A list of the top football news story titles, URLs, and a brief summary for each story from the past 24 hours.
     Example Output:

@@ -1,7 +1,6 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
-from datetime import datetime
 from langchain_openai import ChatOpenAI
 
 # Uncomment the following line to use an example of a custom tool
@@ -59,8 +58,6 @@ class FootballNewsletterCrew():
 	def fetch_news_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['fetch_news_task'],
-			# including description here instead of yaml as we want to use the datetime module
-            description=f'Fetch top AI news stories from the past 24 hours. The current time is {datetime.now()}.',
             agent=self.news_fetcher_agent,
             async_execution=True, # allows us to fetch 5-10 different articles at the same time
 		)
@@ -90,5 +87,6 @@ class FootballNewsletterCrew():
 			agents=self.agents, # Automatically created by the @agent decorator
 			tasks=self.tasks, # Automatically created by the @task decorator
 			process=Process.hierarchical,
-			manager_llm=OpenAIGPT3
+			manager_llm=OpenAIGPT3,
+			verbose=2
 		)

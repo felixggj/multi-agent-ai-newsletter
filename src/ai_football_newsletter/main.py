@@ -1,10 +1,11 @@
-#!/usr/bin/env python
 from ai_football_newsletter.crew import FootballNewsletterCrew
+
+from datetime import datetime
 
 
 def run():
     # Replace with your inputs, it will automatically interpolate any tasks and agents information
     inputs = {
-        'topic': 'AI LLMs'
+        'current_time': datetime.now()
     }
     FootballNewsletterCrew().crew().kickoff(inputs=inputs)
