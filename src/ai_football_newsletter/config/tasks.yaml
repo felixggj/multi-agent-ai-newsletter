@@ -1,9 +1,9 @@
 fetch_news_task:
   description: >
-    Fetch top AI news stories from the past 24 hours. The current time is {current_time}
+    Fetch top european football news stories from the past 24 hours. The current time is {current_time}
 
   expected_output: >
-    A list of the top football news story titles, URLs, and a brief summary for each story from the past 24 hours.
+    A list of the top european football news story titles, URLs, and a brief summary for each story from the past 24 hours.
     Example Output:
     [
         (
@@ -39,7 +39,8 @@ compile_newsletter_task:
   description: >
     Compile the football newsletter using the analyzed articles from fetch and analyze tasks. Ensure the newsletter is engaging, with a consistent style and layout that highlights key football stories, player performances, and tactical insights.
   expected_output: >
-    A complete football newsletter in markdown format, maintaining a consistent and appealing layout. Each section should begin with a headline, followed by the news rundown, details, and an analysis of why the news matters in the football context.
+    A complete football newsletter in markdown format, maintaining a consistent and appealing layout. Each section should begin with a headline, 
+    followed by the news rundown, details, key match statistics, and an analysis of why the news matters in the football context.
     Example Output: 
     '# Top Football Stories This Week:\\n\\n
     - Manchester United's Last-Minute Victory Shakes Premier League\\n
