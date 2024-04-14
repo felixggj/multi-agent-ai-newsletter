@@ -24,7 +24,7 @@ poetry lock
 poetry install
 ```
 
-### Customizing
+### API Keys
 
 **Add your `OPENAI_API_KEY` and `SERPER_API_KEY` into a `.env` file**
 
@@ -38,6 +38,6 @@ streamlit run src/ai_football_newsletter/main.py
 
 You can check the Agent's Chained thoughts and delegation in the terminal view.
 
-## Understanding Your Crew
+## Understanding the Crew
 
 The ai-football-newsletter Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
