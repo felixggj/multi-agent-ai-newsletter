@@ -5,17 +5,18 @@ load_dotenv()
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from langchain_openai import ChatOpenAI
+import streamlit as st
 import json
 
 
 # Adjust the import path according to your project structure
 from ai_football_newsletter.tools.search_tools import SearchTools
 
-# Initialize the OpenAI GPT language models
-OpenAIGPT3 = ChatOpenAI(model="gpt-3.5-turbo")
+# Initializing the OpenAI GPT language models
+OpenAIGPT3 = ChatOpenAI(model="gpt-3.5-turbo") # For testing
 OpenAIGPT4 = ChatOpenAI(model="gpt-4-0125-preview")
 
-import streamlit as st
+# Streamlit callback function to display the agent's actions and observations
 
 def streamlit_callback(step_output):
     # This function will be called after each step of the agent's execution
@@ -31,12 +32,8 @@ def streamlit_callback(step_output):
                 st.markdown(f"**Action:** {action.get('Action', 'N/A')}")
                 st.markdown(
                     f"**Action Input:** ```json\n{action['tool_input']}\n```")
-                
-                # Using HTML and CSS to style the thoughts with a purple background
                 st.markdown(
-                    f"<div style='background-color:#D8BFD8;padding:10px;border-radius:10px;'>"
-                    f"<b>Agent's Thoughts:</b> {action['thought']}"
-                    f"</div>", unsafe_allow_html=True)
+                    f"<span style='color:purple;'>**Agent's Thoughts:** {action['thought']}</span>")
             elif isinstance(action, str):
                 st.markdown(f"**Action:** {action}")
             else:
@@ -62,8 +59,7 @@ def streamlit_callback(step_output):
         else:
             st.markdown(str(step))
 
-
-
+# Defining the FootballNewsletter crew
 
 @CrewBase
 class FootballNewsletterCrew():
@@ -144,6 +140,3 @@ class FootballNewsletterCrew():
         	manager_llm=OpenAIGPT3,
             verbose=2
         )
-
-
-#m
