@@ -15,26 +15,35 @@ from ai_football_newsletter.tools.search_tools import SearchTools
 OpenAIGPT3 = ChatOpenAI(model="gpt-3.5-turbo")
 OpenAIGPT4 = ChatOpenAI(model="gpt-4-0125-preview")
 
+import streamlit as st
+
 def streamlit_callback(step_output):
     # This function will be called after each step of the agent's execution
     st.markdown("---")
     for step in step_output:
         if isinstance(step, tuple) and len(step) == 2:
             action, observation = step
-            if isinstance(action, dict) and "tool" in action and "tool_input" in action and "log" in action:
-                st.markdown(f"# Action")
+            if isinstance(action, dict) and "tool" in action and "tool_input" in action and "log" in action and "thought" in action:
+                st.markdown("# Action")
                 st.markdown(f"**Tool:** {action['tool']}")
-                st.markdown(f"**Tool Input** {action['tool_input']}")
+                st.markdown(f"**Tool Input:** `{action['tool_input']}`")
                 st.markdown(f"**Log:** {action['log']}")
-                st.markdown(f"**Action:** {action['Action']}")
+                st.markdown(f"**Action:** {action.get('Action', 'N/A')}")
                 st.markdown(
                     f"**Action Input:** ```json\n{action['tool_input']}\n```")
+                
+                # Using HTML and CSS to style the thoughts with a purple background
+                st.markdown(
+                    f"<div style='background-color:#D8BFD8;padding:10px;border-radius:10px;'>"
+                    f"<b>Agent's Thoughts:</b> {action['thought']}"
+                    f"</div>", unsafe_allow_html=True)
             elif isinstance(action, str):
                 st.markdown(f"**Action:** {action}")
             else:
                 st.markdown(f"**Action:** {str(action)}")
 
-            st.markdown(f"**Observation**")
+            # Observations section
+            st.markdown("**Observation**")
             if isinstance(observation, str):
                 observation_lines = observation.split('\n')
                 for line in observation_lines:
@@ -51,7 +60,8 @@ def streamlit_callback(step_output):
             else:
                 st.markdown(str(observation))
         else:
-            st.markdown(step)
+            st.markdown(str(step))
+
 
 
 
@@ -130,8 +140,10 @@ class FootballNewsletterCrew():
             agents=self.agents, # Automatically created by the @agent decorator
             tasks=self.tasks,
             process=Process.hierarchical,
-            manager_llm=OpenAIGPT4,
+            #manager_llm=OpenAIGPT4,
+        	manager_llm=OpenAIGPT3,
             verbose=2
         )
 
 
+#m
