@@ -1,9 +1,10 @@
-**FOOTBALL INSIDER - Your Weekly Digest**
+# FOOTBALL INSIDER - Your Weekly Digest
 
 ---
 
-**Liverpool's Strategic Masterclass against Crystal Palace**  
-*The Reds are back in form!*
+## Liverpool's Strategic Masterclass against Crystal Palace
+
+### The Reds are back in form!
 
 **The Rundown:** Liverpool secured a dominant victory over Crystal Palace, showcasing a strategic masterclass that left fans and pundits alike in awe.
 
@@ -13,8 +14,9 @@
 
 ---
 
-**Champions League Quarterfinals: A Closer Look**  
-*Europe's Elite Battle It Out*
+## Champions League Quarterfinals: A Closer Look
+
+### Europe's Elite Battle It Out
 
 **The Rundown:** The Champions League Quarterfinals saw Europe's elite clubs battle it out in a series of thrilling encounters.
 
@@ -24,8 +26,9 @@
 
 ---
 
-**Napoli's Stalemate: A Missed Opportunity?**  
-*The Serie A race tightens*
+## Napoli's Stalemate: A Missed Opportunity?
+
+### The Serie A race tightens
 
 **The Rundown:** Napoli's draw against lowly Genoa saw them drop crucial points in the Serie A title race.
 
@@ -35,8 +38,9 @@
 
 ---
 
-**The El Clasico: Barcelona's Mixed Performance**  
-*Barca's inconsistent form continues*
+## The El Clasico: Barcelona's Mixed Performance
+
+### Barca's inconsistent form continues
 
 **The Rundown:** Barcelona's performance in the El Clasico left fans with mixed feelings as they fell short against Real Madrid.
 
@@ -46,8 +50,9 @@
 
 ---
 
-**Bayer Leverkusen: Dark Horses for the Bundesliga?**  
-*Die Werkself surprise with their title charge*
+## Bayer Leverkusen: Dark Horses for the Bundesliga?
+
+### Die Werkself surprise with their title charge
 
 **The Rundown:** Bayer Leverkusen's consistent performances have seen them emerge as potential Bundesliga title contenders.
 
@@ -57,4 +62,4 @@
 
 ---
 
-Stay tuned for more insights, analysis, and updates on your favourite teams and players in our next edition of **FOOTBALL INSIDER**.
+## Stay tuned for more insights, analysis, and updates on your favourite teams and players in our next edition of **FOOTBALL INSIDER**.
