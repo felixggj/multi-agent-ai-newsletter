@@ -4,8 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def run():
-    # Replace with your inputs, it will automatically interpolate any tasks and agents information
     inputs = {
-        'current_time': datetime.now()
+        'current_time':  datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     }
     FootballNewsletterCrew().crew().kickoff(inputs=inputs)

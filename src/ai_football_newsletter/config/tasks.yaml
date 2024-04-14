@@ -1,9 +1,9 @@
 fetch_news_task:
   description: >
-    Fetch top AI news stories from the past 24 hours. The current time is {current_time}.',
+    Fetch top AI news stories from the past 24 hours. The current time is {current_time}
 
   expected_output: >
-    "A list of the top football news story titles, URLs, and a brief summary for each story from the past 24 hours.
+    A list of the top football news story titles, URLs, and a brief summary for each story from the past 24 hours.
     Example Output:
     [
         {
@@ -17,7 +17,7 @@ fetch_news_task:
             'summary': 'Liverpool has officially announced the signing of a high-profile LaLiga player as they prepare for next season...'
         },
         ...
-    ]"
+    ]
 
 analyze_news_task:
   description: >
@@ -33,7 +33,7 @@ analyze_news_task:
     **The Details:**\n\n
     - Key tactical adjustments made by United's coach at halftime proved pivotal...\n\n
     - Liverpool's forward missed a critical penalty kick in the 75th minute...\n\n
-    **Why It Matters:** This match's outcome could significantly influence the Premier League standings and highlights the strategic depth in modern football.\n\n'
+    **Why It Matters:** This match's outcome could significantly influence the Premier League standings and highlights the strategic depth in modern football.\n\n
 
 compile_newsletter_task:
   description: >
@@ -53,4 +53,4 @@ compile_newsletter_task:
     ## New Tactical Shifts in Barcelona's Recent Match\\n\\n
     **The Rundown:** Barcelona's coach introduced a new formation that could redefine their season...\\n\\n
     **The Details:** The 3-5-2 formation allowed more midfield control and defensive security...\\n\\n
-    **Why It Matters:** This tactical adjustment could be a turning point for Barcelona as they face tougher opponents in upcoming matches...\\n\\n'
+    **Why It Matters:** This tactical adjustment could be a turning point for Barcelona as they face tougher opponents in upcoming matches...\\n\\n
