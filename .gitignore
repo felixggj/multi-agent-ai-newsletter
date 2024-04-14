@@ -3,3 +3,4 @@ poetry.lock
 .env
 *.pyc
 **/__pycache__/
+.ipynb_checkpoints/

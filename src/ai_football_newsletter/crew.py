@@ -86,8 +86,8 @@ class FootballNewsletterCrew():
 			agents=self.agents, # Automatically created by the @agent decorator
 			tasks=self.tasks,
 			process=Process.hierarchical,
-			manager_llm=OpenAIGPT3,
-			# manager_llm=OpenAIGPT4,
+			# manager_llm=OpenAIGPT3,
+			manager_llm=OpenAIGPT4,
 			verbose=2
 		)
 
