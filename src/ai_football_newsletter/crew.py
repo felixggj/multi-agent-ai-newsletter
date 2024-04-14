@@ -5,8 +5,10 @@ load_dotenv()
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 import streamlit as st
 import json
+import os
 
 
 # Adjust the import path according to your project structure
@@ -15,6 +17,12 @@ from ai_football_newsletter.tools.search_tools import SearchTools
 # Initializing the OpenAI GPT language models
 OpenAIGPT3 = ChatOpenAI(model="gpt-3.5-turbo") # For testing
 OpenAIGPT4 = ChatOpenAI(model="gpt-4-0125-preview")
+
+# Using Groq for the manager_llm
+Groq = ChatGroq(
+    api_key=os.getenv("GROQ_API_KEY"),
+    model="mixtral-8x7b-32768"
+)
 
 # Streamlit callback function to display the agent's actions and observations
 
@@ -110,6 +118,7 @@ class FootballNewsletterCrew():
         return Task(
             config=self.tasks_config['fetch_news_task'],
             agent=self.news_fetcher_agent(),
+            #async_execution=True
         )
 
     @task
@@ -117,6 +126,7 @@ class FootballNewsletterCrew():
         return Task(
             config=self.tasks_config['analyze_news_task'],
             agent=self.news_analyzer_agent(),
+            #async_execution=True
         )
     
     @task
@@ -136,5 +146,6 @@ class FootballNewsletterCrew():
             process=Process.hierarchical,
             manager_llm=OpenAIGPT4,
         	#manager_llm=OpenAIGPT3,
+            #manager_llm=Groq,
             verbose=2
         )
