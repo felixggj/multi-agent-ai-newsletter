@@ -22,11 +22,11 @@ fetch_news_task:
 analyze_news_task:
   description: >
     Analyze each european football news story to extract the most significant insights, quotes, and statistics.
-    Ensure there are at least 5 well-researched articles covering the latest matches, player updates, and tactical analyses.
+    Ensure there are exactly 5 well-researched articles covering the latest matches, player updates, and tactical analyses.
     Each article should provide a clear narrative, essential statistics, impactful quotes from players or coaches, and a strategic perspective.
   expected_output: >
     A markdown-formatted analysis for each news story, systematically organized to include a comprehensive rundown, detailed bullet points, 
-    and a "Why it Matters" section. There should be at least 5 articles, each meticulously following the proper format.
+    and a "Why it Matters" section. There should be exactly 5 articles, each meticulously following the proper format.
     Example Output: 
     '## Manchester United Clashes with Liverpool: A Tactical Overview\n\n
     **The Rundown:** Manchester United's latest encounter with Liverpool ended in a dramatic 2-1 victory...\n\n
