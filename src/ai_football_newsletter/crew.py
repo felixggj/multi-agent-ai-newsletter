@@ -24,7 +24,7 @@ class FootballNewsletterCrew():
 			config=self.agents_config['editor_agent'],
 			verbose=True,
 			allow_delegation=True,
-			max_iter=15
+			max_iter=5
 		)
 
 	@agent
