@@ -39,10 +39,10 @@ compile_newsletter_task:
   description: >
     Compile the football newsletter using the analyzed articles from fetch and analyze tasks. Ensure the newsletter is engaging, with a consistent style and layout that highlights key football stories, player performances, and tactical insights.
   expected_output: >
-    A complete football newsletter in markdown format, maintaining a consistent and appealing layout. Each section should begin with a headline, 
+    A complete football newsletter in markdown format, with 5 different news, maintaining a consistent and appealing layout. Each section should begin with a headline, 
     followed by the news rundown, details, and an analysis of why the news matters in the football context.
     Example Output: 
-    '# Top Football Stories This Week:\\n\\n
+    #  Football Weekly News Digest:\\n\\n
     - Manchester United's Last-Minute Victory Shakes Premier League\\n
     - New Tactical Shifts in Barcelona's Recent Match\\n\\n
 

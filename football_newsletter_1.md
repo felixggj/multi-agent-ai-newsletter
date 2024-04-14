@@ -46,17 +46,17 @@ Tchouameni's brilliant strike not only won the game for Real Madrid but also bre
 
 Tchouameni's goal underscores his growing importance to Real Madrid's title ambitions. His continued performance could be a decisive factor in the title race.
 
-# 4. Georgia's Historic Moment: Euro 2024 Here We Come!
+## 4. Georgia's Historic Moment: Euro 2024 Here We Come!
 
-## NEWS RUNDOWN: Short Summary
+### NEWS RUNDOWN: Short Summary
 
 In an unprecedented achievement, Georgia qualifies for Euro 2024.
 
-## DETAILS: The Story
+### DETAILS: The Story
 
 Georgia made history last week by qualifying for Euro 2024. This is a significant milestone for the nation and marks their first appearance in a major football tournament.
 
-## ANALYSIS: Why it matters
+### ANALYSIS: Why it matters
 
 This historic qualification not only puts Georgia on the European football map but also inspires other underdog teams with similar aspirations.
 

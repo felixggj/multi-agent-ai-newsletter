@@ -12,7 +12,7 @@ def run():
     
     
 if __name__ == "__main__":
-    st.title("AI Football Newsletter Generator")
+    st.title("AI Football Newsletter Generator ⚽")
     
     # Use a button to trigger the run function and capture output
     if st.button("Generate Football Newsletter"):
