@@ -24,7 +24,7 @@ def streamlit_callback(step_output):
     for step in step_output:
         if isinstance(step, tuple) and len(step) == 2:
             action, observation = step
-            if isinstance(action, dict) and "tool" in action and "tool_input" in action and "log" in action and "thought" in action:
+            if isinstance(action, dict) and "tool" in action and "tool_input" in action and "log" in action:
                 st.markdown("# Action")
                 st.markdown(f"**Tool:** {action['tool']}")
                 st.markdown(f"**Tool Input:** `{action['tool_input']}`")
@@ -32,8 +32,6 @@ def streamlit_callback(step_output):
                 st.markdown(f"**Action:** {action.get('Action', 'N/A')}")
                 st.markdown(
                     f"**Action Input:** ```json\n{action['tool_input']}\n```")
-                st.markdown(
-                    f"<span style='color:purple;'>**Agent's Thoughts:** {action['thought']}</span>")
             elif isinstance(action, str):
                 st.markdown(f"**Action:** {action}")
             else:
