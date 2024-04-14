@@ -6,16 +6,16 @@ fetch_news_task:
     A list of the top football news story titles, URLs, and a brief summary for each story from the past 24 hours.
     Example Output:
     [
-        {
+        (
             'title': 'Dramatic Late Winner in Manchester Derby',
             'url': 'https://example.com/story1',
             'summary': 'A last-minute goal from Marcus Rashford seals a victory for Manchester United against their city rivals...'
-        },
-        {
+        ),
+        (
             'title': 'Liverpool Confirms New Signing from LaLiga',
             'url': 'https://example.com/story2',
             'summary': 'Liverpool has officially announced the signing of a high-profile LaLiga player as they prepare for next season...'
-        },
+        ),
         ...
     ]
 
