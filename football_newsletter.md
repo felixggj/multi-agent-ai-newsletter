@@ -1,4 +1,3 @@
-```
 # European Football Roundup: A Week of Victories, Challenges, and Comebacks
 
 ## Bayern Munich Triumphs Despite Coman's Injury
@@ -22,4 +21,3 @@
 **The Rundown:** In a historic achievement, Wrexham has secured promotion to League One. We bring you an in-depth analysis of their journey, highlighting the performances that made this possible, and what this means for the club's future.
 
 # Stay tuned for the next edition of our newsletter for more updates, insights, and expert comments on the captivating world of European football.
-```
