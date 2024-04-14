@@ -18,7 +18,7 @@ In a game that was much anticipated, Newcastle United showcased their resilience
 
 This victory not only strengthens Newcastle's position but also sends a strong signal to their rivals. Their European dreams now seem more feasible and it will be interesting to see how this shapes their strategy in upcoming games.
 
-## 2. Headline: Bayern Munich's Calculated Triumph: A Nudge in the Title Race
+## 2. Bayern Munich's Calculated Triumph: A Nudge in the Title Race
 
 ### NEWS RUNDOWN: Short Summary
 
@@ -32,7 +32,7 @@ Bayern Munich demonstrated a tactical masterstroke in their recent victory. The 
 
 This win highlights Bayern's tactical prowess and resilience. However, with key players injured, their depth will be put to the test in the coming weeks.
 
-## 3. Headline: Tchouameni's Strike: Real Madrid's Rising Hope in LaLiga Pursuit
+## 3. Tchouameni's Strike: Real Madrid's Rising Hope in LaLiga Pursuit
 
 ### NEWS RUNDOWN: Short Summary
 
@@ -46,7 +46,7 @@ Tchouameni's brilliant strike not only won the game for Real Madrid but also bre
 
 Tchouameni's goal underscores his growing importance to Real Madrid's title ambitions. His continued performance could be a decisive factor in the title race.
 
-# 4. Headline: Georgia's Historic Moment: Euro 2024 Here We Come!
+# 4. Georgia's Historic Moment: Euro 2024 Here We Come!
 
 ## NEWS RUNDOWN: Short Summary
 
