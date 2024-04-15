@@ -118,6 +118,7 @@ class FootballNewsletterCrew():
         return Task(
             config=self.tasks_config['fetch_news_task'],
             agent=self.news_fetcher_agent(),
+            output_file="fetched_news_task.md"
             #async_execution=True
         )
 
