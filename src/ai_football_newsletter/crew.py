@@ -16,7 +16,7 @@ from ai_football_newsletter.tools.search_tools import SearchTools
 
 # Initializing the OpenAI GPT language models
 OpenAIGPT3 = ChatOpenAI(model="gpt-3.5-turbo") # For testing
-OpenAIGPT4 = ChatOpenAI(model="gpt-4-0125-preview")
+OpenAIGPT4 = ChatOpenAI(model="gpt-4-turbo")
 
 # Using Groq for the manager_llm
 Groq = ChatGroq(
